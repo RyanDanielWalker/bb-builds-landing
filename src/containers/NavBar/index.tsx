@@ -46,7 +46,7 @@ const NavBar: FC<NavBarProps> = ({
       </div>
 
       {!isLargeScreen && menuIsToggled && (
-        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-blue drop-shadow-xl">
+        <div className="bg-light-gray fixed bottom-0 right-0 z-40 h-full w-[300px] drop-shadow-xl">
           <div className="flex justify-end p-12">
             <button onClick={() => setMenuIsToggled(!menuIsToggled)}>
               <XMarkIcon className="h-6 w-6 text-cream transition duration-500 hover:text-orange" />
