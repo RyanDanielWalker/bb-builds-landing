@@ -13,10 +13,13 @@ const NavBar: FC<NavBarProps> = ({
   const flexBetween = "flex items-center justify-between"
   const isLargeScreen = useMediaQuery("(min-width: 1060px)")
   const [menuIsToggled, setMenuIsToggled] = useState<boolean>(false)
+  const navbarBackground = isTopOfPage ? "" : "bg-blue drop-shadow"
 
   return (
     <nav>
-      <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+      >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             <img style={{ height: "30px" }} alt="logo" src={eye_logo} />
@@ -32,7 +35,7 @@ const NavBar: FC<NavBarProps> = ({
               </div>
             ) : (
               <button
-                className="rounded-full bg-orange p-2"
+                className="rounded-full bg-orange p-2 "
                 onClick={() => setMenuIsToggled(!menuIsToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-cream" />
@@ -43,14 +46,14 @@ const NavBar: FC<NavBarProps> = ({
       </div>
 
       {!isLargeScreen && menuIsToggled && (
-        <div className="bg-primary-100 fixed bottom-0 right-0 z-40 h-full w-[300px] drop-shadow-xl">
+        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-blue drop-shadow-xl">
           <div className="flex justify-end p-12">
             <button onClick={() => setMenuIsToggled(!menuIsToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+              <XMarkIcon className="h-6 w-6 text-cream transition duration-500 hover:text-orange" />
             </button>
           </div>
 
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="ml-[33%] flex  flex-col gap-10 text-2xl text-cream">
             {renderLinks({ selectedPage, setSelectedPage })}
           </div>
         </div>
