@@ -1,7 +1,10 @@
-function App() {
+import NavBar from "./containers/NavBar"
 
+function App() {
   return (
-    <div className="app cream">BOYBOY</div>
+    <div className="app bg-cream">
+      <NavBar />
+    </div>
   )
 }
 
