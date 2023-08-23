@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from "react"
 import NavBar from "./containers/NavBar"
 import { SelectedPage } from "./shared/types"
 import { Home } from "./containers/Home"
+import { Services } from "./containers/Services"
 
 const App: FC = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -29,6 +30,7 @@ const App: FC = () => {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Services setSelectedPage={setSelectedPage} />
     </div>
   )
 }

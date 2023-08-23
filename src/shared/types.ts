@@ -18,3 +18,13 @@ export interface NavBarProps extends Omit<LinkProps, "page"> {
 
 export const PAGE_NAMES = ["Home", "About", "Projects", "Services"] as const
 export type PageName = (typeof PAGE_NAMES)[number]
+
+export type ServiceContent = {
+  icon: JSX.Element
+  title: string
+  description: string
+}
+
+export interface ServiceProps extends ServiceContent {
+  setSelectedPage: (value: SelectedPage) => void
+}

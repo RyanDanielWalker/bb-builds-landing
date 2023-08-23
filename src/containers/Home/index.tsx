@@ -11,14 +11,12 @@ export const Home: FC<Pick<NavBarProps, "setSelectedPage">> = ({
   const isLargeScreen = useMediaQuery("(min-width: 1060px)")
 
   return (
-    <section id="home" className="bg-light-gray gap-16 py-10 md:h-full md:pb-0">
+    <section id="home" className="gap-16 bg-light-gray py-10 md:h-full md:pb-0">
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
-        {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
-          {/* HEADINGS */}
           <motion.div
             className="md:-mt-20"
             initial="hidden"
@@ -36,19 +34,19 @@ export const Home: FC<Pick<NavBarProps, "setSelectedPage">> = ({
               </div>
             </div>
             <p className="mt-8 text-xl font-medium">
-              Portland based design and fabrication studio. We partner with
-              architects, interior designers, builders and artists to bring
-              client visions to life.
+              Portland based design and fabrication studio.
             </p>
           </motion.div>
         </div>
-
-        {/* IMAGE */}
         <div
           className="flex basis-3/5 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end"
         >
-          <img alt="home-pageGraphic" src={HomePageGraphic} />
+          <img
+            className="-scale-x-100 transform"
+            alt="home-pageGraphic"
+            src={HomePageGraphic}
+          />
         </div>
       </motion.div>
     </section>
