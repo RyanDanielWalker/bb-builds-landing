@@ -19,14 +19,25 @@ const SERVICES: Array<ServiceContent> = [
       "Experiential Design",
       "Retail Design",
       "Graphic Design",
-      "Sculpture/Fine Arts",
+      "Sculpture",
       "3D Modeling",
+      "Fine Art",
     ],
   },
   {
     icon: <WrenchScrewdriverIcon className="h-6 w-6" />,
     title: "Build",
-    description: [""],
+    description: [
+      "TIG Welding",
+      "Steel",
+      "Stainless Steel",
+      "Aluminum",
+      "Manual/CNC Machining",
+      "CNC Laser Cutting",
+      "Powder-Coating",
+      "Finishing",
+      "Installation",
+    ],
   },
 ]
 
@@ -62,7 +73,7 @@ export const Services: FC<{
         </motion.div>
 
         <motion.div
-          className="mt-5 items-center justify-between gap-8 md:flex"
+          className="mt-5 items-center justify-evenly gap-8 md:flex"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

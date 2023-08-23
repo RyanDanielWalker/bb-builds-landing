@@ -17,7 +17,7 @@ export const Service: FC<ServiceProps> = ({
   return (
     <motion.div
       variants={childVariant}
-      className="mt-5 rounded-md border-2 border-light-gray px-5 py-16 text-center"
+      className="mt-5 rounded-md border-2 border-light-gray px-6 py-16 text-center"
     >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-light-gray bg-orange p-4">
@@ -26,13 +26,14 @@ export const Service: FC<ServiceProps> = ({
       </div>
 
       <h4 className="font-bold">{title}</h4>
-      <ul className="my-3 list-inside list-disc gap-3">
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {description.map((item: string) => (
-          <li key={item} className="my-2 text-sm">
-            {item}
-          </li>
+          <div className="my-3 p-4">
+            <p className="line-clamp-2 text-center">{item}</p>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <AnchorLink
         className="text-sm font-bold text-orange underline hover:text-blue"
