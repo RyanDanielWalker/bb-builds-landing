@@ -26,7 +26,14 @@ export const Service: FC<ServiceProps> = ({
       </div>
 
       <h4 className="font-bold">{title}</h4>
-      <p className="my-3">{description}</p>
+      <ul className="my-3 list-inside list-disc gap-3">
+        {description.map((item: string) => (
+          <li key={item} className="my-2 text-sm">
+            {item}
+          </li>
+        ))}
+      </ul>
+
       <AnchorLink
         className="text-sm font-bold text-orange underline hover:text-blue"
         onClick={() => setSelectedPage(SelectedPage.Contact)}

@@ -22,7 +22,7 @@ export type PageName = (typeof PAGE_NAMES)[number]
 export type ServiceContent = {
   icon: JSX.Element
   title: string
-  description: string
+  description: string[]
 }
 
 export interface ServiceProps extends ServiceContent {

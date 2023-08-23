@@ -12,14 +12,21 @@ const SERVICES: Array<ServiceContent> = [
   {
     icon: <PaintBrushIcon className="h-6 w-6" />,
     title: "Design",
-    description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+    description: [
+      "Art Direction",
+      "Architectural Design",
+      "Environmental Design",
+      "Experiential Design",
+      "Retail Design",
+      "Graphic Design",
+      "Sculpture/Fine Arts",
+      "3D Modeling",
+    ],
   },
   {
     icon: <WrenchScrewdriverIcon className="h-6 w-6" />,
     title: "Build",
-    description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+    description: [""],
   },
 ]
 
