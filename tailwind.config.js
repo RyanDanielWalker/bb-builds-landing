@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         rocGrotesk: ["Roc Grotesk", "sans-serif"],
       },
+      content: {
+        boyboytext: "url('./src/assets/photo/logo_large.png')",
+      },
     },
     screens: {
       xs: "480px",
