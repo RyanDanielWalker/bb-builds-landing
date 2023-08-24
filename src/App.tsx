@@ -3,6 +3,7 @@ import NavBar from "./containers/NavBar"
 import { SelectedPage } from "./shared/types"
 import { Home } from "./containers/Home"
 import { Services } from "./containers/Services"
+import { Contact } from "./containers/Contact"
 
 const App: FC = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -31,6 +32,7 @@ const App: FC = () => {
       />
       <Home setSelectedPage={setSelectedPage} />
       <Services setSelectedPage={setSelectedPage} />
+      <Contact setSelectedPage={setSelectedPage} />
     </div>
   )
 }
