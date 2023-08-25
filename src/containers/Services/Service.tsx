@@ -29,7 +29,7 @@ export const Service: FC<ServiceProps> = ({
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {description.map((item: string) => (
-          <div className="my-3 p-4">
+          <div className="my-3 p-4" key={item}>
             <p className="line-clamp-2 text-center">{item}</p>
           </div>
         ))}

@@ -8,6 +8,7 @@ export const renderLinks: FC<{
 }> = ({ selectedPage, setSelectedPage }) => {
   return PAGE_NAMES.map((pageName) => (
     <Link
+      key={pageName}
       page={pageName}
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}
