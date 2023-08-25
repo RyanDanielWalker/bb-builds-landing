@@ -17,7 +17,7 @@ export const Service: FC<ServiceProps> = ({
   return (
     <motion.div
       variants={childVariant}
-      className="mt-5 rounded-md border-2 border-light-gray px-6 py-16 text-center"
+      className="mt-5 rounded-md border-2 border-light-gray bg-white px-6 py-16 text-center"
     >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-light-gray bg-orange p-4">

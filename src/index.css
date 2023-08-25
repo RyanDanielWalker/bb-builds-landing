@@ -12,4 +12,5 @@ body,
   width: 100%;
   font-family: "Roc Grotesk", sans-serif;
   @apply text-black;
+  @apply bg-cream;
 }

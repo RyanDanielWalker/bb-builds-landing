@@ -7,8 +7,8 @@ import { FC } from "react"
 export const Contact: FC<{
   setSelectedPage: (value: SelectedPage) => void
 }> = ({ setSelectedPage }) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-white border-blue border-2
-  px-5 py-3 placeholder-dark-gray font-bold`
+  const inputStyles = `mb-5 w-full rounded-lg bg-white border-blue border
+  px-5 py-3 placeholder-dark-gray`
 
   const {
     register,
@@ -113,7 +113,7 @@ export const Contact: FC<{
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-orange px-20 py-3 transition duration-500 hover:text-white"
+                className="mt-5 rounded-lg bg-orange px-20 py-3 text-white transition duration-500 hover:text-blue"
               >
                 SUBMIT
               </button>
