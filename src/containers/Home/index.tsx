@@ -4,6 +4,7 @@ import { FC } from "react"
 import { motion } from "framer-motion"
 import HomeLogo from "@/assets/photo/logo_large.png"
 import HomePageGraphic from "@/assets/photo/homepage.png"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 export const Home: FC<Pick<NavBarProps, "setSelectedPage">> = ({
   setSelectedPage,
@@ -36,6 +37,26 @@ export const Home: FC<Pick<NavBarProps, "setSelectedPage">> = ({
             <p className="mt-8 text-xl font-medium">
               Portland based design and fabrication studio.
             </p>
+          </motion.div>
+
+          <motion.div
+            className="mt-8 flex items-center gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <AnchorLink
+              className="text-sm font-bold underline hover:text-orange"
+              onClick={() => setSelectedPage(SelectedPage.Contact)}
+              href={`#${SelectedPage.Contact}`}
+            >
+              <p>Learn More</p>
+            </AnchorLink>
           </motion.div>
         </div>
         <div className="flex basis-2/5 justify-center md:z-10 md:mt-2 md:justify-items-end">
