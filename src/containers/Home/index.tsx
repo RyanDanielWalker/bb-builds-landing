@@ -14,7 +14,7 @@ export const Home: FC<Pick<NavBarProps, "setSelectedPage">> = ({
   return (
     <section id="home" className="gap-16 py-10 md:h-full md:pb-0">
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-full"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         <div className="z-10 mt-32 md:basis-3/5">
