@@ -13,7 +13,7 @@ const NavBar: FC<NavBarProps> = ({
   const flexBetween = "flex items-center justify-between"
   const isLargeScreen = useMediaQuery("(min-width: 1060px)")
   const [menuIsToggled, setMenuIsToggled] = useState<boolean>(false)
-  const navbarBackground = isTopOfPage ? "" : "bg-blue drop-shadow"
+  const navbarBackground = isTopOfPage ? "" : "bg-cream drop-shadow-md"
 
   return (
     <nav>
@@ -46,14 +46,14 @@ const NavBar: FC<NavBarProps> = ({
       </div>
 
       {!isLargeScreen && menuIsToggled && (
-        <div className="bg-light-gray fixed bottom-0 right-0 z-40 h-full w-[300px] drop-shadow-xl">
+        <div className="fixed bottom-0 right-0 z-40 h-full w-[300px] bg-cream drop-shadow-xl">
           <div className="flex justify-end p-12">
             <button onClick={() => setMenuIsToggled(!menuIsToggled)}>
-              <XMarkIcon className="h-6 w-6 text-cream transition duration-500 hover:text-orange" />
+              <XMarkIcon className="h-6 w-6 text-dark-gray transition duration-500 hover:text-orange" />
             </button>
           </div>
 
-          <div className="ml-[33%] flex  flex-col gap-10 text-2xl text-cream">
+          <div className="ml-[33%] flex  flex-col gap-10 text-2xl text-dark-gray">
             {renderLinks({ selectedPage, setSelectedPage })}
           </div>
         </div>

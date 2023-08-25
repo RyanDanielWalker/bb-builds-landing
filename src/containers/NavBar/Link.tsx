@@ -8,7 +8,7 @@ const Link: FC<LinkProps> = ({ page, selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-orange" : ""}
-        cursor-pointer transition duration-500 hover:text-blue
+        cursor-pointer transition duration-500 hover:text-light-gray
       `}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
