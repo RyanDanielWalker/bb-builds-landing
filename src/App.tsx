@@ -24,7 +24,7 @@ const App: FC = () => {
   }, [])
 
   return (
-    <div className="app bg-cream">
+    <div className="app">
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}

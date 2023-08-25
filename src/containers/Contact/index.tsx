@@ -24,7 +24,7 @@ export const Contact: FC<{
   }
 
   return (
-    <section id="contact" className="mx-auto w-5/6 pb-32 pt-24">
+    <section id="contact" className="mx-auto w-5/6 pb-32 pt-24 md:flex">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
         {/* HEADER */}
         <motion.div
@@ -131,7 +131,7 @@ export const Contact: FC<{
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="md:before:content-boyboytext w-full before:absolute before:-bottom-20 before:right-10 before:z-[-1] before:opacity-75">
+            <div>
               <img
                 className="w-full rounded-lg"
                 alt="contact-page-graphic"
